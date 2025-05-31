@@ -1,13 +1,44 @@
 ---
 import "../styles/global.css";
-import Layout from '../layouts/Layout.astro';
+import Layout   from '../layouts/Layout.astro';
+import Header   from '../components/layouts/Header.astro';
+import Footer   from '../components/layouts/Footer.astro';
+import Jobs     from '../components/Jobs.astro';
 
 const pageTitle       = 'Portofolio - Yunda';
 const pageDescription = 'Explore the portfolio of Yunda, showcasing projects and achievements in web development and design.';
 ---
 
-
-<Layout title={pageTitle} description={pageDescription} />
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+    </head>
+    <Header />
+    <body class="bg-black-100 text-gray-900">
+        <main>
+            <div class="relative bg-gray-900 p-8 sm:p-12 lg:p-16">
+                <div class="absolute inset-x-0 bottom-0">
+                    <svg viewBox="0 0 224 12" fill="currentColor" class="-mb-1 w-full text-white" preserveAspectRatio="none">
+                    <path d="M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z"></path>
+                    </svg>
+                </div>
+                <div class="mx-auto px-4 py-4 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-8">
+                    <div class="relative max-w-2xl sm:mx-auto sm:max-w-xl sm:text-center md:max-w-2xl">
+                    <h2 id="About" class="mb-6 text-center text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">Yunda's Portofolio</h2>
+                    <p class="mb-8 text-center text-base text-indigo-200 md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <p class="mb-10 max-w-md text-xs tracking-wide text-indigo-100 sm:mx-auto sm:text-sm md:mb-8"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <Jobs />
+    <Layout title={pageTitle} description={pageDescription} />
+    <Footer />
+</html>
 
 
 
